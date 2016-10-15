@@ -1,0 +1,75 @@
+.pane {
+  background: -webkit-linear-gradient(rgba(57,167,244,1) 0%, rgba(99,174,242,1) 67%, rgba(29,212,192,1) 100%) !important;
+  background: -o-linear-gradient(rgba(57,167,244,1) 0%, rgba(99,174,242,1) 67%, rgba(29,212,192,1) 100%) !important;
+  background: linear-gradient(rgba(57,167,244,1) 0%, rgba(99,174,242,1) 67%, rgba(29,212,192,1) 100%) !important;
+}
+.logo {
+  margin-top: 33%;
+  text-align: center;
+  color: white;
+  margin-top: 93px !important;
+}
+.logo i {
+  font-size: 110px;
+}
+.form-registration {
+  margin-top: 6%;
+}
+.input-with {
+  margin: 0 15%;
+}
+.input-style {
+  background: transparent;
+  border: none;
+  border-bottom: solid 1px white;
+  text-align: center;
+  padding: 6px 0 5px 3px;
+}
+
+.input-form {
+  color: white !important;
+}
+.input-form::-webkit-input-placeholder {color:#daf5ff;}
+.input-form::-moz-placeholder          {color:#daf5ff;}/* Firefox 19+ */
+.input-form:-moz-placeholder           {color:#daf5ff;}/* Firefox 18- */
+.input-form:-ms-input-placeholder      {color:#daf5ff;}
+
+.placeholder-icon {
+  padding-right: 18px !important;
+  font-size: 30px;
+  color: white;
+}
+.wrapper-submit-registration {
+  margin-top: 23%;
+}
+.submit-registration {
+  border-radius: 27px;
+}
+
+form .ng-invalid.ng-dirty {
+  color: red!important;
+}
+form .ng-valid.ng-dirty {
+  color: white !important;
+}
+.messageReg {
+  display: none;
+  text-align: center;
+  font-size: 21px;
+}
+.sucsesfull {
+  display: block !important;
+  text-align: center;
+  font-size: 21px;
+
+  background: rgb(45, 203, 204);
+  color: aliceblue;
+  padding: 16px 0;
+  position: absolute;
+  bottom: 72px;
+  margin: 0 auto;
+  width: 100%;
+  -webkit-box-shadow: 1px 2px 30px 8px rgba(0,0,0,0.28);
+  -moz-box-shadow: 1px 2px 30px 8px rgba(0,0,0,0.28);
+  box-shadow: 1px 2px 9px 1px rgba(0,0,0,0.28);
+}

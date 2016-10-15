@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="Test" ng-controller="TestCtrl as test">
+
+    <ion-pane>
+      <ion-content>
+        <h2 class="logo">
+         <i class="ion-android-restaurant"></i><br>
+         TasteTastic
+       </h2>
+        <form class="form-registration" name="formReg" novalidate ng-submit='test.sendDataReg(test.regData)'>
+          <div class="list">
+            <label class="item item-input input-with input-style">
+              <i class="icon ion-android-mail placeholder-icon"></i>
+              <input class="input-form" name="userEmail" validate-email type="email" placeholder="Email" required ng-model="test.regData.email">
+            </label>
+            <label class="item item-input input-with input-style">
+              <i class="icon ion-locked placeholder-icon"></i>
+              <input class="input-form" name='passUser' type="password" placeholder="Password" required ng-model='test.regData.password'>
+            </label>
+            <label class="item item-input input-with input-style">
+              <i class="icon ion-locked placeholder-icon"></i>
+              <input class="input-form" ng-model='test.regData.password_verify' name='confirm_password' type="password" placeholder="Password confirm" required password-verify="test.regData.password">
+            </label>
+            <h2 class="messageReg" ng-class="test.spinnerClass">Registration successful</h2>
+            <div class="input-with wrapper-submit-registration">
+              <button type="submit" class="button button-block button-stable submit-registration" ng-disabled="formReg.$invalid">Registration</button>
+            </div>
+          </div>
+        </form>
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>
